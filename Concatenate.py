@@ -3,8 +3,8 @@ import numpy
 
 n, m, p = map(int, input().split())
 
-ncolumn = []
-mcolumn = []
+nlist = []
+mlist = []
 
 
 
@@ -13,19 +13,19 @@ for i in range(n):
     ncolumn = input().split()
     if len(ncolumn) == p:
         ncolumn = list(map(int, ncolumn))
-        print(ncolumn)
-        #nlist.append(ncolumn)
-        #print(nlist)
-    #if len(ncolumn) == p:
+        nlist.append(ncolumn)
+
 
 
 for i in range(m):
     mcolumn = input().split()
     if len(mcolumn) == p:
         mcolumn = list(map(int, mcolumn))
-        print(mcolumn)
-        #print(mlist)
+        mlist.append(mcolumn)
 
-#print(map(int,ncol))
-#print(mcol)
-#print(numpy.concatenate((ncol, mcol), axis = 0))
+
+array_n = numpy.array(nlist)
+array_m = numpy.array(mlist)
+#print(array_n)
+#print(array_m)
+print(numpy.concatenate((array_n, array_m), axis = 0))
